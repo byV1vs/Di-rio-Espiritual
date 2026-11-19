@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#315b45">
+<title>Diário Espiritual | Palavra, oração e comunhão</title>
+<style>
+:root{--main:#315b45;--soft:#edf3ed;--ink:#26342b;--muted:#748078;--paper:#f8f7f1;--card:#fffefa;--line:#e7e5dc;--gold:#b18b50}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.65}
+header{background:linear-gradient(135deg,var(--main),#1f3c30);color:white;text-align:center;padding:36px 18px 30px}
+.eyebrow,.tag{font:10px Arial,sans-serif;letter-spacing:2.3px;text-transform:uppercase}
+header h1{font-weight:normal;font-size:clamp(32px,6vw,49px);margin:8px 0 0}
+header p{font:13px Arial,sans-serif;color:#e5ece6;margin:4px 0 0}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:center;gap:4px;flex-wrap:wrap;background:#fffefaed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:8px}
+nav a{font:11px Arial,sans-serif;text-decoration:none;color:var(--ink);padding:8px 11px;border-radius:20px}nav a:hover{background:var(--soft)}
+main{max-width:1080px;margin:26px auto;padding:0 17px 45px}
+.hero{display:grid;grid-template-columns:1.45fr .8fr;gap:16px;margin-bottom:17px}
+.panel,.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:21px;box-shadow:0 5px 20px #26342b08}
+h2{font-weight:normal;font-size:24px;line-height:1.25;margin:5px 0 10px}h3{font-size:19px;font-weight:normal;margin:8px 0}
+.tag{color:var(--main);font-weight:bold}.muted,.small{color:var(--muted)}.small{font:12px/1.55 Arial,sans-serif}
+.date{font:13px Arial,sans-serif;color:var(--muted)}
+.colorline{display:flex;align-items:center;gap:12px;margin:12px 0}.swatch{height:42px;width:42px;border-radius:50%;background:var(--main);border:4px solid white;box-shadow:0 0 0 1px var(--line)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+button,.btn{border:0;border-radius:24px;background:var(--main);color:white;padding:10px 15px;font:12px Arial,sans-serif;cursor:pointer;text-decoration:none;display:inline-block}
+button.alt,.btn.alt{background:var(--soft);color:var(--main)}button:disabled{opacity:.55;cursor:wait}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}
+blockquote{border-left:3px solid var(--gold);margin:12px 0;padding:4px 0 4px 15px;font-size:20px;font-style:italic}
+input[type=date],input[type=search]{border:1px solid var(--line);border-radius:10px;padding:10px;background:white;color:var(--ink);font:13px Arial,sans-serif}
+textarea{width:100%;min-height:125px;border:1px solid var(--line);border-radius:11px;padding:13px;font:15px Georgia,serif;background:#fff;color:var(--ink);resize:vertical}
+label{font:13px Arial,sans-serif}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.prayer{padding:12px 0;border-bottom:1px solid var(--line)}.prayer:last-child{border:0}
+.prayer label{display:flex;gap:10px;align-items:flex-start}.prayer input{accent-color:var(--main);margin-top:5px}
+.status{font:12px Arial,sans-serif;color:var(--muted);margin-top:10px}
+.reading{padding:13px 0;border-bottom:1px solid var(--line)}.reading:last-child{border:0}
+.reading p{margin:5px 0;white-space:pre-wrap}
+.news{display:grid;gap:12px}.news-item{border-bottom:1px solid var(--line);padding-bottom:11px}.news-item:last-child{border:0}
+.news-item a{color:var(--main);font-size:17px;text-decoration:none}.news-item a:hover{text-decoration:underline}
+.news-meta{font:11px Arial,sans-serif;color:var(--muted);margin-top:3px}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:12px}.calendar button{border-radius:9px;padding:8px 2px;background:#f1f1eb;color:var(--ink)}.calendar button.today{outline:2px solid var(--main)}.calendar button.selected{background:var(--main);color:white}
+.dayname{text-align:center;font:10px Arial,sans-serif;color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:15px 0}
+footer{text-align:center;border-top:1px solid var(--line);padding:24px;color:var(--muted);font:12px Arial,sans-serif}
+@media(max-width:720px){.hero,.grid{grid-template-columns:1fr}nav{position:static}main{margin-top:16px}.panel,.card{padding:17px}}
+@media print{nav,.actions,button{display:none!important}body{background:white}.panel,.card{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div class="eyebrow">Um encontro diário com Deus</div><h1>Diário Espiritual</h1><p>Silêncio · Palavra · oração · comunhão</p></header>
+<nav>
+<a href="#hoje">Hoje</a><a href="#liturgia">Liturgia</a><a href="#meditacao">Meditação</a><a href="#santo">Santo do dia</a><a href="#oracao">Orações</a><a href="#meudiario">Meu diário</a><a href="#vaticano">Vaticano</a>
+</nav>
+<main>
+<section class="hero" id="hoje">
+ <div class="panel"><div class="tag">Seu encontro com Deus</div><h2>Que a Palavra ilumine seu dia.</h2><p>Separe alguns minutos para escutar, agradecer e conversar com o Senhor.</p><div class="date" id="todayLabel"></div>
+ <div class="actions"><a class="btn" href="#liturgia">Ir para a liturgia</a><button class="alt" onclick="window.print()">Imprimir / salvar PDF</button></div></div>
+ <div class="panel"><div class="tag">Tempo litúrgico no Brasil</div><h2 id="season">Carregando calendário…</h2><div class="colorline"><div class="swatch" id="swatch"></div><div><strong id="colorName">—</strong><div class="small">Cor litúrgica</div></div></div><p class="small" id="colorMeaning">A cor litúrgica nos ajuda a acompanhar o caminho de oração da Igreja.</p><p class="small" id="calendarNote">A celebração e a cor podem variar em festas locais; confira sempre o calendário da sua diocese.</p></div>
+</section>
+
+<section class="card" id="liturgia">
+ <div class="tag">01 · Liturgia diária</div><h2>A Palavra de Deus para hoje</h2>
+ <div class="row"><label for="dayPicker">Escolha uma data:</label><input id="dayPicker" type="date"><button id="loadDay">Consultar</button></div>
+ <p class="status" id="litStatus" aria-live="polite">Buscando as leituras…</p>
+ <div id="readings"><p class="small">As leituras aparecerão aqui quando a fonte responder.</p></div>
+ <div class="actions"><a class="btn alt" href="https://www.cnbb.org.br/liturgia-diaria/" target="_blank" rel="noopener">Consultar CNBB</a><a class="btn alt" href="https://sagradaliturgia.com.br/" target="_blank" rel="noopener">Fonte litúrgica</a></div>
+ <p class="small">As leituras são carregadas por uma API comunitária que consulta fontes litúrgicas. Se estiver indisponível, use os links oficiais acima.</p>
+</section>
+
+<section class="grid">
+ <article class="card" id="meditacao"><div class="tag">02 · Meditação do Evangelho</div><h2>Guardar a Palavra no coração</h2>
+ <p id="meditationText">Depois de ler o Evangelho, permaneça alguns instantes em silêncio. Observe o que Jesus revela sobre o amor de Deus e como essa mensagem pode transformar suas escolhas concretas.</p>
+ <blockquote id="meditationQuestion">O que esta Palavra me convida a viver hoje?</blockquote>
+ <p class="small">Esta é uma proposta de meditação para oração pessoal, não uma homilia oficial nem um texto atribuído ao Papa ou a um sacerdote.</p>
+ </article>
+ <article class="card" id="santo"><div class="tag">03 · Santoral</div><h2>Santo(a) do dia</h2><div id="saintContent"><p class="small">Carregando a memória litúrgica…</p></div>
+ <a class="btn alt" href="https://www.cancaonova.com/" target="_blank" rel="noopener">Conhecer a Canção Nova</a></article>
+</section>
+
+<section class="grid">
+ <article class="card" id="oracao"><div class="tag">04 · Vida de oração</div><h2>Pequenas pausas com Deus</h2>
+ <div class="prayer"><label><input type="checkbox" data-prayer="manha"><span><strong>Oração da manhã</strong><br><span class="small">Senhor, entrego a Ti este novo dia. Guia meus pensamentos, palavras e atitudes.</span></span></label></div>
+ <div class="prayer"><label><input type="checkbox" data-prayer="espirito"><span><strong>Vinde, Espírito Santo</strong><br><span class="small">Vinde, Espírito Santo, enchei os corações dos vossos fiéis e acendei neles o fogo do vosso amor.</span></span></label></div>
+ <div class="prayer"><label><input type="checkbox" data-prayer="pai"><span><strong>Pai-Nosso</strong><br><span class="small">Reze lentamente, meditando cada pedido desta oração ensinada por Jesus.</span></span></label></div>
+ <div class="prayer"><label><input type="checkbox" data-prayer="noite"><span><strong>Oração da noite</strong><br><span class="small">Obrigado, Senhor, pelo dia vivido. Perdoa minhas faltas e renova minha esperança.</span></span></label></div>
+ <p class="status" id="prayerProgress">0 de 4 momentos concluídos.</p>
+ <hr><h3>Uma oração em latim</h3><blockquote>Gloria Patri, et Filio, et Spiritui Sancto.</blockquote><p class="small">Glória ao Pai, ao Filho e ao Espírito Santo. Como era no princípio, agora e sempre. Amém.</p>
+ </article>
+ <article class="card" id="meudiario"><div class="tag">05 · Diário pessoal</div><h2>Escreva sua oração</h2><p class="small">Anote agradecimentos, intenções e aprendizados. As reflexões ficam salvas apenas neste navegador e dispositivo.</p>
+ <textarea id="journal" placeholder="Hoje, a Palavra me fez perceber que…"></textarea><div class="actions"><button id="saveNote">Salvar reflexão</button><button class="alt" id="clearNote">Apagar texto de hoje</button></div><p class="status" id="saveStatus" aria-live="polite"></p>
+ <hr><h3>Minhas reflexões anteriores</h3><div id="history" class="small">Suas anotações salvas aparecerão aqui.</div>
+ </article>
+</section>
+
+<section class="card" style="margin-top:16px" id="musica">
+ <div class="tag">06 · Música para rezar</div><h2>Um canto para acompanhar sua oração</h2>
+ <p>Escolha uma música católica para escutar enquanto medita. A sugestão abaixo abre uma busca, sem reproduzir conteúdo protegido dentro do site.</p>
+ <div class="row"><input id="songSearch" type="search" value="música católica adoração" aria-label="Buscar música"><button id="searchSong">Buscar música</button></div>
+ <p class="small">Você pode trocar a busca pelo nome de um canto relacionado ao Evangelho do dia.</p>
+</section>
+
+<section class="card" style="margin-top:16px" id="vaticano">
+ <div class="tag">07 · Igreja no mundo</div><h2>Notícias do Vaticano</h2><p class="small">Últimas publicações do Vatican News em português. Se o feed não carregar, acesse o portal oficial.</p>
+ <div id="newsStatus" class="status">Carregando notícias…</div><div id="newsList" class="news"></div>
+ <div class="actions"><a class="btn alt" href="https://www.vaticannews.va/pt.html" target="_blank" rel="noopener">Abrir Vatican News</a><a class="btn alt" href="https://www.vatican.va/content/vatican/pt.html" target="_blank" rel="noopener">Site oficial da Santa Sé</a></div>
+</section>
+
+<section class="card" style="margin-top:16px" id="calendario">
+ <div class="tag">08 · Calendário pessoal</div><h2>Escolha um dia para rezar</h2><p class="small">Selecione uma data para consultar a liturgia correspondente.</p><div class="row"><button class="alt" id="prevMonth">‹</button><strong id="monthTitle"></strong><button class="alt" id="nextMonth">›</button></div><div class="calendar" id="calendarGrid"></div>
+</section>
+</main>
+<footer>“A tua palavra é lâmpada para os meus pés e luz para o meu caminho.” · Salmo 119, 105<br>Diário Espiritual · Feito para cultivar a fé no cotidiano.</footer>
+<script>
+const $=id=>document.getElementById(id);
+const today=new Date(); today.setHours(12,0,0,0);
+const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const niceDate=d=>new Intl.DateTimeFormat('pt-BR',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(d);
+$('todayLabel').textContent=niceDate(today);
+$('dayPicker').value=iso(today);
+let selectedDate=new Date(today), calendarMonth=new Date(today.getFullYear(),today.getMonth(),1);
+function easterDate(y){let a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=(h+l-7*m+114)%31+1;return new Date(y,mo-1,da)}
+function liturgicalInfo(date){
+ const y=date.getFullYear(), easter=easterDate(y), ash=new Date(easter);ash.setDate(easter.getDate()-46);
+ const pent=new Date(easter);pent.setDate(easter.getDate()+49);
+ const advent=new Date(y,10,27);advent.setDate(advent.getDate()+(7-advent.getDay())%7);
+ const christmas=new Date(y,11,25);
+ let s='Tempo Comum',c='Verde',h='#315b45',m='O verde recorda a esperança, o crescimento na fé e a caminhada cotidiana com Cristo.';
+ if(date>=ash&&date<easter){s='Quaresma';c='Roxo';h='#70527f';m='O roxo convida à conversão, à oração e à preparação do coração.'}
+ if(date>=easter&&date<=pent){s='Tempo Pascal';c='Branco';h='#b18b50';m='O branco celebra a alegria da Ressurreição e a vida nova em Cristo.'}
+ if(date>=advent&&date<christmas){s='Advento';c='Roxo';h='#70527f';m='O roxo expressa espera vigilante e preparação para a vinda do Senhor.'}
+ if(date>=christmas&&date.getMonth()===11||date.getMonth()===0&&date.getDate()<=12){s='Tempo do Natal';c='Branco';h='#b18b50';m='O branco celebra o nascimento de Jesus e a alegria da Encarnação.'}
+ // Solenidades e festas específicas podem usar branco ou vermelho; a data local deve ser conferida.
+ return {s,c,h,m};
+}
+function updateLiturgical(date){const x=liturgicalInfo(date);document.documentElement.style.setProperty('--main',x.h);document.documentElement.style.setProperty('--soft',x.h+'18');$('season').textContent=x.s;$('colorName').textContent=x.c;$('colorMeaning').textContent=x.m;$('swatch').style.background=x.h}
+updateLiturgical(today);
+const labels={primeira:'Primeira leitura',salmo:'Salmo responsorial',evangelho:'Evangelho',segunda:'Segunda leitura',aclamacao:'Aclamação ao Evangelho',liturgia:'Liturgia do dia',data:'Data',cor:'Cor litúrgica',tempo:'Tempo litúrgico',santo:'Santo do dia',celebracao:'Celebração'};
+function prettyKey(k){return labels[k.toLowerCase()]||k.replace(/_/g,' ').replace(/^\w/,c=>c.toUpperCase())}
+function renderAny(value,key=''){
+ if(value===null||value===undefined)return '';
+ if(typeof value==='string'||typeof value==='number'){const s=String(value).trim();if(!s)return '';const div=document.createElement('div');div.className='reading';const p=document.createElement('p');p.textContent=s;div.append(p);return div}
+ if(Array.isArray(value)){const frag=document.createDocumentFragment();value.forEach((v,i)=>frag.append(renderAny(v,`${key} ${i+1}`)));return frag}
+ const frag=document.createDocumentFragment();
+ Object.entries(value).forEach(([k,v])=>{if(v===null||v===undefined||typeof v==='boolean')return;const wrap=document.createElement('section');wrap.className='reading';const head=document.createElement('h3');head.textContent=prettyKey(k);wrap.append(head);wrap.append(renderAny(v,k));frag.append(wrap)});
+ return frag;
+}
+function flattenStrings(obj,out=[]){if(typeof obj==='string'){out.push(obj);return out}if(Array.isArray(obj)){obj.forEach(x=>flattenStrings(x,out));return out}if(obj&&typeof obj==='object')Object.values(obj).forEach(x=>flattenStrings(x,out));return out}
+async function loadLiturgy(date){
+ $('litStatus').textContent='Consultando a liturgia…';$('readings').replaceChildren();
+ const url='https://api-liturgia-diaria.vercel.app/?date='+encodeURIComponent(iso(date));
+ try{
+  const res=await fetch(url,{headers:{'Accept':'application/json'}});
+  if(!res.ok)throw new Error('Fonte indisponível');
+  const data=await res.json();const payload=data.today??data;
+  if(!payload||!flattenStrings(payload).length)throw new Error('Não foram encontrados textos para esta data.');
+  $('readings').append(renderAny(payload));
+  $('litStatus').textContent='Conteúdo carregado para '+niceDate(date)+'.';
+  const all=flattenStrings(payload).join(' ');
+  const gospel=all.match(/(?:Evangelho|Proclamação)[\s\S]{0,1400}/i);
+  if(gospel){$('meditationText').textContent='Leia com calma o Evangelho desta data. Observe o que Jesus faz, o que ensina e quais pessoas encontra. Pergunte-se: que convite de conversão, confiança ou caridade aparece nesta passagem?';$('meditationQuestion').textContent='Como posso transformar esta mensagem em uma atitude concreta hoje?'}
+  // A API pode trazer o santo e a celebração dentro do objeto; exibe um resumo sem inventar biografia.
+  const saint=data.santo||payload.santo||payload.celebracao;
+  if(saint){$('saintContent').textContent=typeof saint==='string'?saint:flattenStrings(saint).join(' ')}
+  else $('saintContent').innerHTML='<p class="small">A API não informou um santo separado para esta data. Consulte o calendário litúrgico local.</p>';
+ }catch(err){
+  $('litStatus').textContent='Não foi possível carregar automaticamente: '+err.message;
+  const p=document.createElement('p');p.className='small';p.textContent='A conexão pode estar bloqueada ou o serviço pode estar temporariamente fora do ar. Consulte a liturgia pelos links acima.';
+  $('readings').append(p);
+ }
+}
+$('loadDay').addEventListener('click',()=>{const d=new Date($('dayPicker').value+'T12:00:00');if(!isNaN(d)){selectedDate=d;updateLiturgical(d);loadLiturgy(d);renderCalendar()}});
+loadLiturgy(today);
+async function loadSaint(){
+ try{
+  const r=await fetch('https://api-liturgia-diaria.vercel.app/santo-do-dia');
+  if(!r.ok)throw new Error();
+  const data=await r.json();const saint=data.today??data.santo??data;
+  const host=$('saintContent');host.replaceChildren();
+  const strings=flattenStrings(saint).filter(x=>x&&x.trim());
+  if(strings.length){strings.forEach((txt,i)=>{const p=document.createElement('p');p.textContent=txt;host.append(p)})}
+  else throw new Error();
+ }catch(e){$('saintContent').textContent='Não foi possível carregar o santo do dia agora. Consulte uma fonte católica para conferir a memória de hoje.'}
+}
+loadSaint();
+const prayerChecks=[...document.querySelectorAll('[data-prayer]')];
+function prayerKey(c){return 'de-prayer-'+iso(today)+'-'+c.dataset.prayer}
+function progress(){let n=prayerChecks.filter(c=>c.checked).length;$('prayerProgress').textContent=`${n} de 4 momentos concluídos hoje.`}
+prayerChecks.forEach(c=>{c.checked=localStorage.getItem(prayerKey(c))==='1';c.addEventListener('change',()=>{localStorage.setItem(prayerKey(c),c.checked?'1':'0');progress()})});progress();
+const noteKey='de-note-'+iso(today);$('journal').value=localStorage.getItem(noteKey)||'';
+$('saveNote').onclick=()=>{localStorage.setItem(noteKey,$('journal').value);$('saveStatus').textContent='Reflexão salva neste dispositivo.';renderHistory()};
+$('clearNote').onclick=()=>{if(confirm('Deseja apagar a reflexão de hoje?')){$('journal').value='';localStorage.removeItem(noteKey);$('saveStatus').textContent='Reflexão apagada.';renderHistory()}};
+function renderHistory(){const entries=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('de-note-')&&localStorage.getItem(k)){entries.push({date:k.slice(8),text:localStorage.getItem(k)})}}entries.sort((a,b)=>b.date.localeCompare(a.date));const host=$('history');host.replaceChildren();if(!entries.length){host.textContent='Nenhuma reflexão salva ainda.';return}entries.slice(0,8).forEach(e=>{const div=document.createElement('div');div.className='reading';const strong=document.createElement('strong');strong.textContent=e.date.split('-').reverse().join('/');const p=document.createElement('p');p.textContent=e.text;div.append(strong,p);host.append(div)})}renderHistory();
+async function loadNews(){const rss='https://www.vaticannews.va/pt.rss.xml';const url='https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rss);try{const r=await fetch(url);if(!r.ok)throw new Error();const j=await r.json();if(!j.items?.length)throw new Error();$('newsList').replaceChildren();j.items.slice(0,6).forEach(item=>{const d=document.createElement('article');d.className='news-item';const a=document.createElement('a');a.href=item.link;a.target='_blank';a.rel='noopener';a.textContent=item.title;const meta=document.createElement('div');meta.className='news-meta';meta.textContent=item.pubDate?new Date(item.pubDate).toLocaleString('pt-BR'):'Vatican News';d.append(a,meta);$('newsList').append(d)});$('newsStatus').textContent='Atualizado a partir do feed RSS do Vatican News.'}catch(e){$('newsStatus').textContent='Não foi possível carregar o feed automaticamente. Use o portal oficial nos links abaixo.'}}
+loadNews();
+$('searchSong').onclick=()=>{const q=encodeURIComponent($('songSearch').value.trim()||'música católica');window.open('https://www.youtube.com/results?search_query='+q,'_blank','noopener')};
+function renderCalendar(){const y=calendarMonth.getFullYear(),m=calendarMonth.getMonth();$('monthTitle').textContent=new Intl.DateTimeFormat('pt-BR',{month:'long',year:'numeric'}).format(calendarMonth);const g=$('calendarGrid');g.replaceChildren();['D','S','T','Q','Q','S','S'].forEach(x=>{const s=document.createElement('div');s.className='dayname';s.textContent=x;g.append(s)});for(let i=0;i<new Date(y,m,1).getDay();i++){g.append(document.createElement('span'))}const count=new Date(y,m+1,0).getDate();for(let n=1;n<=count;n++){const d=new Date(y,m,n,12);const b=document.createElement('button');b.textContent=n;if(iso(d)===iso(today))b.classList.add('today');if(iso(d)===iso(selectedDate))b.classList.add('selected');b.onclick=()=>{$('dayPicker').value=iso(d);selectedDate=d;updateLiturgical(d);loadLiturgy(d);renderCalendar();$('liturgia').scrollIntoView({behavior:'smooth'})};g.append(b)}}
+$('prevMonth').onclick=()=>{calendarMonth.setMonth(calendarMonth.getMonth()-1);renderCalendar()};$('nextMonth').onclick=()=>{calendarMonth.setMonth(calendarMonth.getMonth()+1);renderCalendar()};renderCalendar();
+</script>
+</body></html>
